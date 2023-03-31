@@ -1,6 +1,6 @@
+import os
 import random
-import json
-from tutorial import *
+from Dev import *
 
 while True:
     choices = ["rock","paper","scissors"]
@@ -13,6 +13,7 @@ while True:
         bet1 = int(input("YOUR BET : "))
         bet2 = int(input("COMPUTER BET : "))
         player = input("rock, paper, or scissors : ").lower()
+        os.system('cls')
 
     if player == computer:
         print(f"computer: {computer}")
@@ -52,13 +53,18 @@ while True:
             print("WIN")
             win(bet1,bet2)
     
-    play_again = input("Play Again (yes/no): ").lower()
-    
+    play_again = input("Play Again? (yes/no): ").lower()
+    os.system('cls')
+    if cP() <= 0 or cC() <= 0:
+        print(f"Not Enough Chip!\n")
+        break
+
     if play_again != "yes":
         break
 
 
-print(f"YOUR CHIP : {cP()}")
-print(f"COMPUTER CHIP : {cC()}")
+print(f"YOUR CHIP      : {cP()}")
+print(f"COMPUTER CHIP  : {cC()}")
 
 # Inspired by anime (Kakegurui / Compulsive Gambler)
+

@@ -19,7 +19,7 @@ def win(a,b):
         data['chip'][0]['player'] += (a+b)
         data['chip'][1]['computer'] -= (a+b)
         json.dump(data, f, indent=4)
-        print("sukses")
+        # print("sukses")
 
 def lose(x,y):
     with open("data.json", "r") as f:
@@ -28,4 +28,4 @@ def lose(x,y):
         data['chip'][0]['player'] -= (x+y)
         data['chip'][1]['computer'] += (x+y)
         json.dump(data, f, indent=4)
-        print("sukses")
+        # print("sukses")
