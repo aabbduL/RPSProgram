@@ -8,7 +8,7 @@ while True:
     player = None
 
     while player not in choices:
-        print(f"YOUR CHIP : {cP()} || COMPUTER CHIP : {cC()} ")
+        print(f"YOUR CHIP : {chipPlayer()} || COMPUTER CHIP : {chipComputer()} ")
         print("==========================================")
         bet1 = int(input("YOUR BET : "))
         bet2 = int(input("COMPUTER BET : "))
@@ -55,7 +55,7 @@ while True:
     
     play_again = input("Play Again? (yes/no): ").lower()
     os.system('cls')
-    if cP() <= 0 or cC() <= 0:
+    if chipPlayer() <= 0 or chipComputer() <= 0:
         print(f"Not Enough Chip!\n")
         break
 
@@ -63,8 +63,8 @@ while True:
         break
 
 
-print(f"YOUR CHIP      : {cP()}")
-print(f"COMPUTER CHIP  : {cC()}")
+print(f"YOUR CHIP      : {chipPlayer()}")
+print(f"COMPUTER CHIP  : {chipComputer()}")
 
 # Inspired by anime (Kakegurui / Compulsive Gambler)
 

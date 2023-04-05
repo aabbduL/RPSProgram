@@ -1,12 +1,12 @@
 import json
 
-def cP():
+def chipPlayer():
     with open("data.json", "r") as f:
         data = json.load(f)
         p = data['chip'][0]['player']
     return p
 
-def cC():
+def chipComputer():
     with open("data.json", "r") as f:
         data = json.load(f)
         c = data['chip'][1]['computer']
